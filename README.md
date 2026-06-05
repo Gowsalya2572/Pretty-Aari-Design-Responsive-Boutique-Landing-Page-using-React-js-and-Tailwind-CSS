@@ -5,6 +5,7 @@ A  boutique-style responsive landing page designed for showcasing handcrafted Aa
 Features
 
 - Elegant boutique-inspired UI
+- Fully responsive design
 - Hero section 
 - Customized Aari work showcase
 - Gallery section for previous designs

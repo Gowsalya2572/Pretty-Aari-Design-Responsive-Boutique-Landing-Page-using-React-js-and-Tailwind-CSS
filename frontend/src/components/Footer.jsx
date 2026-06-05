@@ -4,7 +4,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='w-full flex flex-col p-8'>
-      <div className='flex flex-row justify-between mb-17'>
+      <div className='flex  flex-col lg:flex-row justify-between gap-4 lg:mb-17'>
         <div>
           <h5 className='font-head text-primary text-xl pb-6'>Pretty Aari Design</h5>
           <p className='text-[#78716C] font-body'>
@@ -24,7 +24,7 @@ const Footer = () => {
            <p className='text-[#78716C] font-body tracking-widest pb-6'>PINTEREST</p>
          </div>
         </div>
-        <div className='pr-6'>
+        <div className='pr-6 pb-6'>
         <h5 className='font-head text-primary tracking-widest pb-6'>NEWSLETTER</h5>
         <input type="email" name="" id="" className='border border-b-1 border-b-tertiary border-0 text-lg italic font-head ' placeholder='Your Email'/>
         <button><ArrowRight className='border border-b-1 border-b-tertiary text-primary border-0'/></button>

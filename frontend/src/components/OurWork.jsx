@@ -1,34 +1,110 @@
-import { Section, SectionIcon } from 'lucide-react'
-import React from 'react'
+import React, { useState } from "react";
 
 const OurWork = () => {
+  const works = {
+  bridal: [
+    "src/assets/bridal1.jpg",
+    "src/assets/bridal2.jpg",
+    "src/assets/bridal3.jpg",
+    "src/assets/bridal4.jpg"
+  ],
+
+  simple: [
+    "src/assets/simple1.jpg",
+    "src/assets/simple2.jpeg",
+    "src/assets/simple3.jpg",
+    "src/assets/simple4.jpg"
+  ],
+
+  trending: [
+    "src/assets/trending1.jpg",
+    "src/assets/trending2.jpg",
+    "src/assets/trending3.jpg",
+    "src/assets/trending4.jpg"
+  ],
+};
+
+  const [category, setCategory] = useState("bridal");
+
   return (
-    <section id='work' className='min-h-screen w-full py-15 px-5'>
-       <h2 className='font-head text-primary text-5xl pb-3 font-semibold'>🖼️Our Work</h2>
-       <p className='text-[#554243] pl-3'>A visual journey through our finest creations.</p>
-       <div className='h-screen grid grid-cols-3 grid-rows-2 gap-2 p-4'>
-          <div className=' row-span-2 '>
-            <img src="src/assets/work-1.jpeg" alt="img1" className='h-full w-full object-cover'/>
-          </div>
-          <div className=' col-span-2 '>
-            <img src="src/assets/work-2.jpeg" alt="img2" className='w-full h-full object-cover ' />
-          </div>
-          <div className='row-span-1 '>
-            <img src="src/assets/work-3.jpeg" alt="" className='w-full h-full object-cover '/>
-          </div>
-          <div className='row-span-1 '>
-             <img src="src/assets/work-4.jpeg" alt="" className='w-full h-full object-cover '/>
-          </div>
+    <section
+      id="work"
+      className="min-h-screen w-full py-12 px-4 md:px-8 bg-[#FCF9F2]"
+    >
+      {/* Heading + Navigation */}
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 mb-10">
+        
+        <div>
+          <h2 className="font-head text-primary text-3xl md:text-4xl lg:text-5xl font-semibold">
+            🖼️ Our Work
+          </h2>
+
+          <p className="text-[#554243] mt-3">
+            A visual journey through our finest creations.
+          </p>
+        </div>
+
+        {/* Category Navigation */}
+        <div className="flex flex-wrap gap-3 ">
           
-       </div>
+          <button
+            onClick={() => setCategory("bridal")}
+            className={`px-5 py-2 rounded-full transition-all duration-300
+              ${
+                category === "bridal"
+                  ? "bg-primary text-white"
+                  : "bg-white border border-primary text-primary"
+              }`}
+          >
+            Bridal
+          </button>
+
+          <button
+            onClick={() => setCategory("simple")}
+            className={`px-5 py-2 rounded-full transition-all duration-300
+              ${
+                category === "simple"
+                  ? "bg-primary text-white"
+                  : "bg-white border border-primary text-primary"
+              }`}
+          >
+            Simple
+          </button>
+
+          <button
+            onClick={() => setCategory("trending")}
+            className={`px-5 py-2 rounded-full transition-all duration-300
+              ${
+                category === "trending"
+                  ? "bg-primary text-white"
+                  : "bg-white border border-primary text-primary"
+              }`}
+          >
+            Trending
+          </button>
+
+        </div>
+      </div>
+
+      {/* Gallery */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 p-5">
+        
+        {works[category].map((image, index) => (
+          <div
+            key={index}
+            className="overflow-hidden rounded-xl shadow-lg"
+          >
+            <img
+              src={image}
+              alt={`design-${index}`}
+              className="w-full h-80 object-cover hover:scale-110 transition duration-500"
+            />
+          </div>
+        ))}
+
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default OurWork
-
-
-
-
-
-
+export default OurWork;

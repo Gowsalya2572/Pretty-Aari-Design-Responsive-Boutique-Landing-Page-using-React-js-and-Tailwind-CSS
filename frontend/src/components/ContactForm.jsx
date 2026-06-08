@@ -1,7 +1,55 @@
 import { Clock4, MapPin, PhoneCall, ShieldCheck, Timer } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react'
+
+//https://script.google.com/macros/s/AKfycbzZgZVeR2sR8SdV-6NJFvMehGQ_ust7Kp3SgScIBf2ab4gMwF-_JaWai5k6UQU9ax-p/exec
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+  name: "",
+  mobile: "",
+  design: "",
+  message: ""
+});
+
+
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value
+  });
+};
+
+
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbzZgZVeR2sR8SdV-6NJFvMehGQ_ust7Kp3SgScIBf2ab4gMwF-_JaWai5k6UQU9ax-p/exec",
+      {
+        method: "POST",
+        body: JSON.stringify(formData)
+      }
+    );
+
+    const result = await response.json();
+
+    if (result.success) {
+      alert("Request submitted successfully!");
+
+      setFormData({
+        name: "",
+        mobile: "",
+        design: "",
+        message: ""
+      });
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Submission failed");
+  }
+};
   return (
     <section id='form' className='bg-[#FCF9F2] w-full min-h-screen p-8 md:px-8'>
       <div className='max-w-7xl  grid  grid-cols-1 lg:grid-cols-2 gap-10 bg-[#FFFFFF]  shadow-xl mx-auto p-4 md:8 lg:p-10'>
@@ -47,21 +95,21 @@ const ContactForm = () => {
 
           </div>
           <div className='m-6'>
-             <form  className='w-full max-w-md flex flex-col  gap-6 border border-tertiary p-6 md:p-8 mx-auto shadow-xl'>
+             <form onSubmit={handleSubmit} className='w-full max-w-md flex flex-col  gap-6 border border-tertiary p-6 md:p-8 mx-auto shadow-xl'>
               <h6 className='text-primary font-head text-lg'>Request a callback</h6>
                 <div className='flex flex-col gap-2'>
                 <label htmlFor="name" className='text-[#554243]'>NAME</label> 
-                <input type="text" id="name" className='border-b border-tertiary bg-neutral text-[#6B7280] p-2 outline-none' placeholder='Your Name' />
+                <input type="text" name='name' value={formData.name} onChange={handleChange} id="name" className='border-b border-tertiary bg-neutral text-[#6B7280] p-2 outline-none' placeholder='Your Name' />
               </div>
 
               <div className='flex flex-col gap-2'>
-                <label htmlFor="number" className='text-[#554243]'>MOBILE NUMBER</label> 
-                <input type="number"  id="number" className='border-b border-tertiary bg-neutral text-[#6B7280] p-2 outline-none' placeholder='Your Number' />
+                <label htmlFor="mobile" className='text-[#554243]'>MOBILE NUMBER</label> 
+                <input type="tel" name='mobile' value={formData.mobile} onChange={handleChange}  id="mobile" className='border-b border-tertiary bg-neutral text-[#6B7280] p-2 outline-none' placeholder='Your Number' />
               </div>
 
               <div className='flex flex-col gap-2'>
                 <label htmlFor="design" className='text-[#554243]'>DESIGN TYPE</label> 
-                <select id="design" className='border-b border-tertiary bg-neutral text-[#6B7280] p-2 outline-none' > 
+                <select name='design' value={formData.design} onChange={handleChange} id="design" className='border-b border-tertiary bg-neutral text-[#6B7280] p-2 outline-none' > 
                   <option value="">Select</option>
                   <option value="bridal">Bridal</option>
                   <option value="simple">simple</option>
@@ -70,11 +118,11 @@ const ContactForm = () => {
 
               <div className='flex flex-col gap-2'>
                 <label htmlFor="message" className='text-[#554243]'>MESSAGE (optional)</label> 
-                <textarea id="message" cols="2"  rows="2" className='border-b border-tertiary bg-neutral p-3 text-[#6B7280] outline-none resize-none' placeholder='Share your vision' ></textarea>
+                <textarea name='message' value={formData.message} onChange={handleChange} id="message" cols="2"  rows="2" className='border-b border-tertiary bg-neutral p-3 text-[#6B7280] outline-none resize-none' placeholder='Share your vision' ></textarea>
               </div>
               
               <div className='flex flex-col gap-2 p-2'>
-                <button className='bg-primary p-2 text-white cursor-pointer hover:opacity-90 transition'>Submit Request</button>
+                <button type='submit' className='bg-primary p-2 text-white cursor-pointer hover:opacity-90 transition'>Submit Request</button>
               </div>
              </form>
           </div>

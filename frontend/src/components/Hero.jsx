@@ -7,7 +7,7 @@ const Hero = () => {
   className="h-screen bg-cover bg-center bg-fixed flex items-center"
   style={{
     backgroundImage:
-      "url('/src/assets/bgfordesign.png')",
+      "url('src/assets/bgfordesign.png')",
   }}
 >
 

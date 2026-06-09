@@ -1,5 +1,6 @@
 import { Phone } from 'lucide-react'
 import React from 'react'
+import order from '../assets/OrderImg.jpeg'
 
 const Order = () => {
   return (
@@ -47,7 +48,7 @@ const Order = () => {
       </div>
 
       <div className='w-full lg:w-1/2  flex items-center justify-center '>
-           <img src="src/assets/OrderImg.jpeg" alt="order" className='w-full max-w-sm md:max-w-md lg:max-w-xl shadow-lg' />
+           <img src={order} alt="order" className='w-full max-w-sm md:max-w-md lg:max-w-xl shadow-lg' />
       </div>
     </section>    
   )

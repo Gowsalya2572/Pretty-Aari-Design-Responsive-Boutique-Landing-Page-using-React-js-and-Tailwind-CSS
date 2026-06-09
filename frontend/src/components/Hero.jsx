@@ -1,5 +1,6 @@
 import React from 'react'
 import { PartyPopper, Phone} from 'lucide-react'
+import  bg from '../assets/bgfordesign.png'
 
 const Hero = () => {
   return (
@@ -7,7 +8,7 @@ const Hero = () => {
   className="h-screen bg-cover bg-center bg-fixed flex items-center"
   style={{
     backgroundImage:
-      "url('src/assets/bgfordesign.png')",
+      `url(${bg})`,
   }}
 >
 

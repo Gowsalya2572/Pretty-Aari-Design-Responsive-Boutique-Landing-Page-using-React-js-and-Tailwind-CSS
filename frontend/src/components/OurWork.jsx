@@ -1,26 +1,38 @@
 import React, { useState } from "react";
+import bridal1 from '../assets/bridal1.jpg'
+import bridal2 from '../assets/bridal2.jpg'
+import bridal3 from '../assets/bridal3.jpg'
+import bridal4 from '../assets/bridal4.jpg'
+import simple1 from '../assets/simple1.jpg'
+import simple2 from '../assets/simple2.jpeg'
+import simple3 from '../assets/simple3.jpg'
+import simple4 from '../assets/simple4.jpg'
+import trending1 from '../assets/trending1.jpg'
+import trending2 from '../assets/trending2.jpg'
+import trending3 from '../assets/trending3.jpg'
+import trending4 from '../assets/trending4.jpg'
 
 const OurWork = () => {
   const works = {
   bridal: [
-    "src/assets/bridal1.jpg",
-    "src/assets/bridal2.jpg",
-    "src/assets/bridal3.jpg",
-    "src/assets/bridal4.jpg"
+    bridal1,
+    bridal2,
+    bridal3,
+    bridal4
   ],
 
   simple: [
-    "src/assets/simple1.jpg",
-    "src/assets/simple2.jpeg",
-    "src/assets/simple3.jpg",
-    "src/assets/simple4.jpg"
+    simple1,
+    simple2,
+    simple3,
+    simple4
   ],
 
   trending: [
-    "src/assets/trending1.jpg",
-    "src/assets/trending2.jpg",
-    "src/assets/trending3.jpg",
-    "src/assets/trending4.jpg"
+    trending1,
+    trending2,
+    trending3,
+    trending4
   ],
 };
 

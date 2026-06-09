@@ -1,11 +1,12 @@
 import React from 'react'
+import aboutImg from '../assets/about.jpeg'
 
 const About = () => {
   return (
    <section id='about' className='bg-[#FCF9F2] w-full min-h-screen flex justify-start '>
      <div className='grid grid-cols-1 lg:grid-cols-2'>
        <div>
-           <img src="src/assets/about.jpeg" alt="about" className='w-full max-w-sm md:max-w-md lg:max-w-xl pt-10 lg:py-15 mx-auto ' />
+           <img src={aboutImg} alt="about" className='w-full max-w-sm md:max-w-md lg:max-w-xl pt-10 lg:py-15 mx-auto ' />
        </div>
        <div className='flex flex-col gap-5 md:gap-10 lg:gap-15 justify-start  lg:py-15 lg:px-5  m-7'>
          <h2 className='text-primary text-3xl md:text-4xl lg:text-5xl font-head font-semibold underline underline-offset-25 decoration-tertiary py-5'>💫 About Us</h2>

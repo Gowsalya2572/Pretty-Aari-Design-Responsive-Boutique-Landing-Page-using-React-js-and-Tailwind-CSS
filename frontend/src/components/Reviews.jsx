@@ -1,5 +1,6 @@
 import { Star, StarHalf } from 'lucide-react'
 import React from 'react'
+import pic from '../assets/propic.png'
 
 const Reviews = () => {
   return (
@@ -47,7 +48,7 @@ const Reviews = () => {
           </div>
           <p>From the first consultation to the final product, the experience was seamless. Truly the best Aari designers in Chennai.</p>
           <div className='flex justify-center items-center gap-2 pt-2'>
-            <img src="src/assets/propic.png" alt="photo" className='border border-white object-cover rounded-full h-12 w-12' />
+            <img src={pic} alt="photo" className='border border-white object-cover rounded-full h-12 w-12' />
             <h6 className='text-tertiary font-normal'>MEERA KRISHNAN</h6>
           </div>
          </div>

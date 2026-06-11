@@ -18,7 +18,7 @@ const Reviews = () => {
           </div>
           <p>The bridal blouse was beyond my expectations. Every stitch was a masterpiece. Ifelt like royality on my wedding day.</p>
           <div className='flex justify-center items-center gap-2 pt-2'>
-            <img src="src/assets/propic.png" alt="photo" className='border border-white object-cover rounded-full h-12 w-12' />
+            <img src={pic} alt="photo" className='border border-white object-cover rounded-full h-12 w-12' />
             <h6 className='text-tertiary'>ANANYA SHARMA</h6>
           </div>
          </div>
@@ -33,7 +33,7 @@ const Reviews = () => {
           </div>
           <p>I requested  a custom design for my reception lehenga. The attention to detail and the quality or Zardosi work is unmatched.</p>
           <div className='flex justify-center items-center gap-2 pt-2'>
-            <img src="src/assets/propic.png" alt="photo" className='border border-white object-cover rounded-full h-12 w-12' />
+            <img src={pic} alt="photo" className='border border-white object-cover rounded-full h-12 w-12' />
             <h6 className='text-tertiary'>PRIYA VENKAT</h6>
           </div>
          </div>

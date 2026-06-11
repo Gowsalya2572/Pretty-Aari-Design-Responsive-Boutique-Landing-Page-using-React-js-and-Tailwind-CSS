@@ -5,7 +5,7 @@ import  bg from '../assets/bgfordesign.png'
 const Hero = () => {
   return (
    <section id='hero'
-  className="h-screen bg-cover bg-center bg-fixed flex items-center"
+  className="min-h-screen bg-cover bg-center bg-fixed flex items-center"
   style={{
     backgroundImage:
       `url(${bg})`,
@@ -15,7 +15,7 @@ const Hero = () => {
     <div className='grid grid-cols-1 content-center lg:grid-cols-2 place-items-center h-full w-full '>
         <div className=' m-3 lg:m-6 text-center lg:text-left '>
           <h3 className='text-body text-tertiary inline-block border  border-tertiary p-1 lg:my-3 mt-3 '>HANDRAFTED HERITAGE</h3>
-          <h1 className='text-white font-head text-4xl lg:text-5xl font-semibold my-3 lg:my-6 '>Pretty Aari Design</h1>
+          <h1 className='text-white font-head text-5xl md:text-6xl lg:text-7xl font-semibold my-3 lg:my-6 '>Pretty Aari Design</h1>
           <h6 className='text-tertiary font head italic text-lg lg:text-xl mb-3 lg:mb-6'>✨ Handcrafted Elegance for Every Occasion</h6>
           <p className='text-white font-body'>Discover the soulful art of Aari embroidery. From intricate bridal 
             blouses to regal lehengas. We breathe life into fabric through precision,

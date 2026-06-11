@@ -5,7 +5,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-   <nav className=' w-full h-16 font-head shadow-sm sticky top-0 z-50'>
+   <nav className=' w-full h-16 font-head shadow-sm sticky top-0 z-50 bg-[#FCF9F2]/95 backdrop-blur-md'>
     <div className='flex justify-between items-center '>
        <div>
           <h2 className='m-3 cursor-pointer text-[#b00225] text-3xl font-medium  italic'>Pretty Aari Design</h2>

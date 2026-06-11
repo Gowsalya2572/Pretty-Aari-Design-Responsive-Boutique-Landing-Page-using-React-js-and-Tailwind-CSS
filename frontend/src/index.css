@@ -9,3 +9,7 @@
     --font-head: 'Playfair Display', serif;
     --font-body: 'Poppins', sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}

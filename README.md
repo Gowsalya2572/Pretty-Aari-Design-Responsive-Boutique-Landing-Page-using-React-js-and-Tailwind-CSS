@@ -20,7 +20,7 @@ A modern boutique-style landing page designed to showcase handcrafted Aari embro
 - Google Apps Script
 - Google Sheets
   
-🎯 Purpose
+🎯 Purpose :
 This project was developed for a boutique Aari embroidery business to showcase handcrafted designs, highlight services, and 
 collect customer enquiries through a callback request form.
   
